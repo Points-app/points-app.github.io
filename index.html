@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PointS — By Hamza Yiğit Doğan</title>
 <script src="./support.js"></script>
 </head>
@@ -11,21 +12,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0}
+*, *::before, *::after { box-sizing: border-box; }
+body{margin:0; overflow-x: hidden; width: 100%;}
+img, svg { max-width: 100%; height: auto; }
 a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 .df{font-family:'Bricolage Grotesque',sans-serif}
-.h2{margin:0 0 14px;font:800 44px/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-1px}
-.lead{margin:0 0 48px;font-size:18px;color:#3C4742;max-width:620px}
-.sec{max-width:1200px;margin:0 auto;padding:88px 32px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card{background:#fff;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,box-shadow .3s}
+.h2{margin:0 0 14px;font:800 clamp(32px, 5vw, 44px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-1px}
+.lead{margin:0 0 48px;font-size:clamp(16px, 2vw, 18px);color:#3C4742;max-width:620px}
+.sec{max-width:1200px;margin:0 auto;padding:clamp(48px, 8vw, 88px) clamp(16px, 4vw, 32px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:#fff;border-radius:24px;padding:clamp(24px, 4vw, 32px);display:flex;flex-direction:column;gap:12px;transition:transform .3s,box-shadow .3s}
 .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(16,22,20,.1)}
 .card h3{margin:0;font:700 22px 'Bricolage Grotesque',sans-serif}
 .card p{margin:0;color:#3C4742}
 .ic{stroke:var(--ac)}
-.btn{min-height:52px;padding:0 28px;border-radius:999px;border:0;background:#101614;color:#fff;font:700 16px 'DM Sans',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn{min-height:52px;padding:0 28px;border-radius:999px;border:0;background:#101614;color:#fff;font:700 16px 'DM Sans',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s;white-space:nowrap;}
 .btn:hover{background:#2B3A33;transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,22,20,.3)}
-.inp{flex:1 1 220px;min-height:52px;padding:0 20px;border-radius:999px;border:1.5px solid #101614;background:#fff;font:16px 'DM Sans',sans-serif}
+.inp{flex:1 1 220px;width:100%;min-height:52px;padding:0 20px;border-radius:999px;border:1.5px solid #101614;background:#fff;font:16px 'DM Sans',sans-serif}
 .faq{background:#fff;border-radius:18px;padding:22px 26px;margin-bottom:14px}
 .faq summary{cursor:pointer;font:700 19px 'Bricolage Grotesque',sans-serif}
 .faq p{margin:12px 0 0;color:#3C4742}
@@ -44,19 +47,19 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 </helmet>
 <div style="--ac:{{accent}};font-family:'DM Sans',system-ui,sans-serif;color:#101614;background:#F4F6F3;line-height:1.55">
 
-<header style="max-width:1200px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+<header style="max-width:1200px;margin:0 auto;padding:22px clamp(16px, 4vw, 32px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
 <a href="#" style="display:flex;flex-direction:column;line-height:1.1"><span class="df" style="font-weight:800;font-size:28px;letter-spacing:-.5px">Point<span style="color:var(--ac)">S</span></span><span style="font-size:12px;color:#6A756F;font-weight:500">By Hamza Yiğit Doğan</span></a>
-<nav style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;font-size:15px;font-weight:500">
+<nav style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:15px;font-weight:500">
 <a href="#nasil">Nasıl çalışır</a><a href="#mekan">Mekân sayfası</a><a href="#ilkeler">İlkeler</a><a href="#sss">SSS</a>
 <a href="#erisim" style="background:#101614;color:#fff;padding:12px 20px;border-radius:999px">Erken erişim</a>
 </nav>
 </header>
 
-<section style="max-width:1200px;margin:0 auto;padding:48px 32px 88px;display:flex;flex-wrap:wrap;gap:56px;align-items:center">
-<div style="flex:1 1 440px">
+<section style="max-width:1200px;margin:0 auto;padding:clamp(32px, 6vw, 48px) clamp(16px, 4vw, 32px) clamp(48px, 8vw, 88px);display:flex;flex-wrap:wrap;gap:clamp(32px, 5vw, 56px);align-items:center">
+<div style="flex:1 1 320px">
 <p class="in" style="margin:0 0 20px;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ac)">Restoran keşfi için güvenilir rehber</p>
-<h1 class="df in d1" style="margin:0;font-weight:800;font-size:64px;line-height:1.02;letter-spacing:-2px">Puanlara değil, güvendiğin insanlara bak.</h1>
-<p class="in d2" style="margin:24px 0 32px;font-size:20px;max-width:520px;color:#3C4742">PointS, doğrulanmış yorumcuların ve takip ettiğin seslerin önerilerinden, senin zevkine uyan restoranları bulur.</p>
+<h1 class="df in d1" style="margin:0;font-weight:800;font-size:clamp(40px, 7vw, 64px);line-height:1.02;letter-spacing:-2px">Puanlara değil, güvendiğin insanlara bak.</h1>
+<p class="in d2" style="margin:24px 0 32px;font-size:clamp(16px, 2vw, 20px);max-width:520px;color:#3C4742">PointS, doğrulanmış yorumcuların ve takip ettiğin seslerin önerilerinden, senin zevkine uyan restoranları bulur.</p>
 <div class="in d3" style="display:flex;gap:12px;flex-wrap:wrap;max-width:520px">
 <label for="mail-hero" style="position:absolute;left:-9999px">E-posta adresin</label>
 <input id="mail-hero" class="inp" type="email" placeholder="E-posta adresin">
@@ -64,8 +67,8 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 </div>
 </div>
 
-<div class="in d2" style="flex:1 1 340px;display:flex;justify-content:center">
-<div class="fl" style="width:100%;max-width:410px;background:#fff;border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(16,22,20,.13);display:flex;flex-direction:column;gap:16px">
+<div class="in d2" style="flex:1 1 300px;display:flex;justify-content:center">
+<div class="fl" style="width:100%;max-width:410px;background:#fff;border-radius:28px;padding:clamp(16px, 3vw, 22px);box-shadow:0 24px 60px rgba(16,22,20,.13);display:flex;flex-direction:column;gap:16px">
 <div style="display:flex;justify-content:space-between;align-items:center"><span></span><span style="font-size:12px;font-weight:700;background:#E6F1ED;color:#1F6F5B;padding:5px 10px;border-radius:999px">Doğrulanmış ziyaret</span></div>
 <svg viewBox="0 0 400 190" style="width:100%;height:auto;border-radius:18px;display:block" role="img" aria-label="Noes Burger Moda için çizilmiş trüflü burger görseli">
 <rect width="400" height="190" fill="#2B3A33"/><rect y="150" width="400" height="40" fill="#1C2722"/>
@@ -107,12 +110,12 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 </section>
 
 <section id="mekan" class="sec" style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
-<div class="rv" style="flex:1 1 380px">
+<div class="rv" style="flex:1 1 300px">
 <h2 class="h2">İşletmeler kendini anlatır.</h2>
 <p style="margin:0 0 18px;font-size:18px;color:#3C4742">Her mekânın kendi sayfası var. Geçmişi, imza lezzetleri ve kurucusunun notu burada, yorumlardan ayrı ve açıkça işaretli olarak yer alır.</p>
 <p style="margin:0;font-size:18px;color:#3C4742">İşletme sayfası sıralamayı etkilemez. Sadece seni mekâna götüren hikâyeyi anlatır.</p>
 </div>
-<div class="rv" style="flex:1 1 400px;background:#101614;color:#fff;border-radius:28px;padding:36px">
+<div class="rv" style="flex:1 1 300px;background:#101614;color:#fff;border-radius:28px;padding:clamp(24px, 4vw, 36px)">
 <h3 class="df" style="margin:10px 0 4px;font-size:30px">Noes Burger Moda</h3>
 <p style="margin:0 0 18px;color:#B9C4BE;font-size:15px">Moda, Kadıköy · 2016'dan beri</p>
 <p style="margin:0 0 20px;color:#DDE5E0">2016'dan beri hep daha iyisi için sizlerin geri bildirimleriyle kendimi yeniliyoruz. Açık mutfağımızda, hızlı servisimizle gerçek lezzetleri sizlerle buluşturmaktan mutluluk duyarız.</p>
@@ -122,12 +125,12 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 
 <section style="background:#fff;border-top:1px solid #E3E8E4;border-bottom:1px solid #E3E8E4">
 <div class="sec" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-<div class="rv" style="flex:1 1 380px">
+<div class="rv" style="flex:1 1 300px">
 <h2 class="h2">Tek yıldız değil, beş boyut.</h2>
 <p style="margin:0 0 16px;font-size:18px;color:#3C4742">Bir restorana tek puan vermek, bir yemeği tek kelimeyle anlatmak gibi. PointS'te yorumcular lezzeti, porsiyonu, servis hızını, ortamı ve fiyat/performansı ayrı ayrı değerlendirir.</p>
 <p style="margin:0;font-size:18px;color:#3C4742">Sen de profilinde neyin senin için daha önemli olduğunu seçersin. Burgerde lezzet ve porsiyon, romantik bir akşamda ortam öne çıkar. Sıralama ona göre değişir.</p>
 </div>
-<div class="rv" style="flex:1 1 380px;background:#F4F6F3;border-radius:28px;padding:32px">
+<div class="rv" style="flex:1 1 300px;background:#F4F6F3;border-radius:28px;padding:clamp(20px, 4vw, 32px)">
 <div class="df" style="font-weight:700;font-size:22px;margin-bottom:20px">Örnek zevk profili</div>
 <div style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:6px"><span>Lezzet</span><span style="color:#6A756F;font-weight:500">Çok önemli</span></div><div style="height:10px;border-radius:999px;background:#E3E8E4"><div class="bw" style="width:95%;height:10px;border-radius:999px;background:#F2B544"></div></div></div><div style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:6px"><span>Porsiyon</span><span style="color:#6A756F;font-weight:500">Önemli</span></div><div style="height:10px;border-radius:999px;background:#E3E8E4"><div class="bw" style="width:70%;height:10px;border-radius:999px;background:#F2B544"></div></div></div><div style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:6px"><span>Servis hızı</span><span style="color:#6A756F;font-weight:500">Orta</span></div><div style="height:10px;border-radius:999px;background:#E3E8E4"><div class="bw" style="width:55%;height:10px;border-radius:999px;background:#F2B544"></div></div></div><div style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:6px"><span>Ortam</span><span style="color:#6A756F;font-weight:500">Az önemli</span></div><div style="height:10px;border-radius:999px;background:#E3E8E4"><div class="bw" style="width:35%;height:10px;border-radius:999px;background:#F2B544"></div></div></div><div style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:6px"><span>Fiyat/performans</span><span style="color:#6A756F;font-weight:500">Önemli</span></div><div style="height:10px;border-radius:999px;background:#E3E8E4"><div class="bw" style="width:80%;height:10px;border-radius:999px;background:#F2B544"></div></div></div>
 </div>
@@ -148,9 +151,9 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 
 <section id="ilkeler" style="background:#101614;color:#fff">
 <div class="sec">
-<h2 class="h2 rv" style="font-size:52px;letter-spacing:-1.5px;max-width:720px">Sıralama satın alınamaz.</h2>
+<h2 class="h2 rv" style="font-size:clamp(36px, 6vw, 52px);letter-spacing:-1.5px;max-width:720px">Sıralama satın alınamaz.</h2>
 <p class="lead rv" style="color:#B9C4BE">PointS bir rehber olmak için var, reklam panosu olmak için değil. Güveni korumak için baştan şu ilkelerle çıkıyoruz.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px">
 <div class="rv" style="border-top:2px solid #F2B544;padding-top:20px"><h3 class="df" style="margin:0 0 8px;font-size:22px">Ödemeli öne çıkarma yok</h3><p style="margin:0;color:#B9C4BE">Hiçbir işletme sıralamada yer satın alamaz.</p></div>
 <div class="rv" style="border-top:2px solid #F2B544;padding-top:20px"><h3 class="df" style="margin:0 0 8px;font-size:22px">Şeffaf doğrulama</h3><p style="margin:0;color:#B9C4BE">Bir yorumcunun neden doğrulandığı herkese görünür.</p></div>
 <div class="rv" style="border-top:2px solid #F2B544;padding-top:20px"><h3 class="df" style="margin:0 0 8px;font-size:22px">İş birlikleri işaretli</h3><p style="margin:0;color:#B9C4BE">Davet ya da sponsorlukla gidilen mekânlar açıkça belirtilir.</p></div>
@@ -177,7 +180,7 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 </section>
 
 <section id="erisim" class="sec rv" style="text-align:center;padding-top:40px">
-<h2 class="h2" style="font-size:48px;letter-spacing:-1.5px">İlk bilenlerden ol.</h2>
+<h2 class="h2" style="font-size:clamp(36px, 6vw, 48px);letter-spacing:-1.5px">İlk bilenlerden ol.</h2>
 <p style="margin:0 auto 32px;font-size:18px;color:#3C4742;max-width:520px">PointS hazır olduğunda haber verelim. İlk adımda İstanbul'dan başlıyoruz.</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:540px;margin:0 auto">
 <label for="mail-end" style="position:absolute;left:-9999px">E-posta adresin</label>
@@ -185,14 +188,14 @@ a{color:inherit;text-decoration:none;transition:opacity .2s}a:hover{opacity:.7}
 </div>
 </section>
 
-<footer style="max-width:1200px;margin:0 auto;padding:28px 32px;border-top:1px solid #E3E8E4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#6A756F">
+<footer style="max-width:1200px;margin:0 auto;padding:28px clamp(16px, 4vw, 32px);border-top:1px solid #E3E8E4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#6A756F">
 <span><b class="df" style="color:#101614;font-size:18px">Point<span style="color:var(--ac)">S</span></b> · By Hamza Yiğit Doğan</span>
 <span>© 2026 PointS. Tüm hakları saklıdır. Güvenle keşfet.</span>
 </footer>
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1F6F5B"},"$preview":{"width":1360,"height":3900}}'>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1F6F5B"},"$preview":{"width":1360,"h":3900}}'>
 class Component extends DCLogic {
 renderVals() {
 return { accent: this.props.accent ?? '#1F6F5B' };
